@@ -1,233 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-    <title>Trabajo Final - Documentación</title>
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css"
-      rel="stylesheet"
-    />
-    <style>
-      :root {
-        --background: #1a1a1a;
-        --foreground: #ffffff;
-        --primary: #ffffff;
-        --secondary: #888888;
-        --accent: #2c2c2c;
-      }
-
-      body {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
-          'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
-          'Helvetica Neue', sans-serif;
-        line-height: 1.6;
-        color: var(--foreground);
-        background-color: var(--background);
-        margin: 0;
-        padding: 0;
-      }
-
-      .container {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 2rem;
-      }
-
-      .footer {
-        margin-top: 4rem;
-        padding: 2rem;
-        border-top: 1px solid var(--accent);
-        text-align: center;
-      }
-
-      h1,
-      h2 {
-        border-bottom: 1px solid var(--accent);
-        padding-bottom: 0.5rem;
-      }
-
-      h1 {
-        font-size: 2.5rem;
-        color: var(--primary);
-      }
-
-      h2 {
-        font-size: 1.8rem;
-        color: var(--secondary);
-        margin-top: 2rem;
-      }
-
-      ol {
-        padding-left: 1.5rem;
-      }
-
-      li {
-        margin-bottom: 1rem;
-      }
-
-      strong {
-        color: var(--primary);
-      }
-
-      img {
-        max-width: 100%;
-      }
-
-      video {
-        max-width: 100%;
-        border-radius: 4px;
-      }
-
-      .image-placeholder {
-        padding: 1rem;
-        text-align: center;
-        margin: 1rem 0;
-      }
-
-      pre[class*='language-'] {
-        background-color: var(--accent);
-        border: 1px solid var(--secondary);
-        border-radius: 4px;
-        padding: 1rem;
-        overflow-x: auto;
-        font-size: smaller;
-      }
-
-      code[class*='language-'] {
-        font-family: Menlo, Monaco, 'Courier New', monospace;
-      }
-
-      .code-container {
-        position: relative;
-      }
-
-      .copy-button {
-        position: absolute;
-        top: 0.5rem;
-        right: 0.5rem;
-        background-color: var(--primary);
-        color: var(--background);
-        border: none;
-        border-radius: 4px;
-        padding: 0.5rem 1rem;
-        font-size: 0.875rem;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-      }
-
-      .copy-button:hover {
-        background-color: #0056b3;
-      }
-
-      .copy-button:focus {
-        outline: 2px solid var(--foreground);
-        outline-offset: 2px;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <h1>Trabajo Final</h1>
-
-    <div class="image-placeholder">
-      <video controls preload="auto">
-        <source src="./Demostracion.webm" type="video/webm">
-      </video>
-    </div>
-
-      <h2>Requerimientos:</h2>
-      <ol>
-        <li>
-          <strong>Nombre: R1 - Agregar un contacto:</strong>
-          <ul>
-            <li>Resumen: Agrega un nuevo contacto a la lista.</li>
-            <li>
-              Entradas: Nombre, Apellido, Dirección, Correo Electrónico, Números
-              de teléfono, Palabras.
-            </li>
-            <li>Resultados: True, en caso de error con los datos False.</li>
-          </ul>
-        </li>
-        <li>
-          <strong>Nombre: R2 - Eliminar un contacto:</strong>
-          <ul>
-            <li>Resumen: Elimina el contacto seleccionado.</li>
-            <li>Entrada: Índice del contacto seleccionado.</li>
-            <li>
-              Resultado: True, en caso de error al eliminar el contacto o al
-              buscar el contacto False.
-            </li>
-          </ul>
-        </li>
-        <li>
-          <strong>Nombre: R3 - Mostrar un contacto:</strong>
-          <ul>
-            <li>Resumen: Muestra la información de un contacto.</li>
-            <li>Entrada: Índice del contacto seleccionado.</li>
-            <li>
-              Resultado: True, en caso de error al buscar el contacto False.
-            </li>
-          </ul>
-        </li>
-        <li>
-          <strong>Nombre: R4 - Editar un contacto:</strong>
-          <ul>
-            <li>
-              Resumen: Modifica la información del contacto a excepción del
-              nombre y el apellido.
-            </li>
-            <li>
-              Entrada: Nombre, Apellido, Dirección, Correo Electrónico, Números
-              de teléfono, Palabras.
-            </li>
-            <li>
-              Resultado: True, en caso de error a la hora de buscar el contacto,
-              o modificar nombre o apellido False.
-            </li>
-          </ul>
-        </li>
-        <li>
-          <strong>Nombre: R5 - Mostrar todos los contactos:</strong>
-          <ul>
-            <li>Resumen: Muestra todos los contactos de la lista.</li>
-            <li>Entrada: Ninguna.</li>
-            <li>
-              Resultado: True, en caso de error al buscar los contactos False.
-            </li>
-          </ul>
-        </li>
-        <li>
-          <strong>Nombre: R6 - Buscar contactos por palabra clave:</strong>
-          <ul>
-            <li>
-              Resumen: Busca todos los contactos que tengan la palabra clave
-              dada.
-            </li>
-            <li>Entrada: Palabra clave.</li>
-            <li>
-              Resultado: True, en caso de error al buscar los contactos False.
-            </li>
-          </ul>
-        </li>
-      </ol>
-
-      <h2>Modelo:</h2>
-      <div class="image-placeholder">
-        <img
-          loading="lazy"
-          src="./diagram-export-19-11-2024-9_31_26-p.-m..svg"
-          alt="Diagrama de clases"
-        />
-      </div>
-
-      <h2>Código:</h2>
-      <h3>listaDeContactos:</h3>
-      <div class="code-container">
-        <pre><code class="language-python">
+<!doctypehtml><html lang=es><meta charset=UTF-8><meta content="width=device-width,initial-scale=1"name=viewport><title>Trabajo Final - Documentación</title><link href=https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css rel=stylesheet><style>:root{--background:#1a1a1a;--foreground:#ffffff;--primary:#ffffff;--secondary:#888888;--accent:#2c2c2c}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans','Droid Sans','Helvetica Neue',sans-serif;line-height:1.6;color:var(--foreground);background-color:var(--background);margin:0;padding:0}.container{max-width:800px;margin:0 auto;padding:2rem}.footer{margin-top:4rem;padding:2rem;border-top:1px solid var(--accent);text-align:center}h1,h2{border-bottom:1px solid var(--accent);padding-bottom:.5rem}h1{font-size:2.5rem;color:var(--primary)}h2{font-size:1.8rem;color:var(--secondary);margin-top:2rem}ol{padding-left:1.5rem}li{margin-bottom:1rem}strong{color:var(--primary)}img{max-width:100%}video{max-width:100%;border-radius:4px}.image-placeholder{padding:1rem;text-align:center;margin:1rem 0}pre[class*=language-]{background-color:var(--accent);border:1px solid var(--secondary);border-radius:4px;padding:1rem;overflow-x:auto;font-size:smaller}code[class*=language-]{font-family:Menlo,Monaco,'Courier New',monospace}.code-container{position:relative}.copy-button{position:absolute;top:.5rem;right:.5rem;background-color:var(--primary);color:var(--background);border:none;border-radius:4px;padding:.5rem 1rem;font-size:.875rem;cursor:pointer;transition:background-color .3s ease}.copy-button:hover{background-color:#0056b3}.copy-button:focus{outline:2px solid var(--foreground);outline-offset:2px}</style><div class=container><h1>Trabajo Final</h1><div class=image-placeholder><video controls preload=auto><source src=./Demostracion.webm type=video/webm></video></div><h2>Requerimientos:</h2><ol><li><strong>Nombre: R1 - Agregar un contacto:</strong><ul><li>Resumen: Agrega un nuevo contacto a la lista.<li>Entradas: Nombre, Apellido, Dirección, Correo Electrónico, Números de teléfono, Palabras.<li>Resultados: True, en caso de error con los datos False.</ul><li><strong>Nombre: R2 - Eliminar un contacto:</strong><ul><li>Resumen: Elimina el contacto seleccionado.<li>Entrada: Índice del contacto seleccionado.<li>Resultado: True, en caso de error al eliminar el contacto o al buscar el contacto False.</ul><li><strong>Nombre: R3 - Mostrar un contacto:</strong><ul><li>Resumen: Muestra la información de un contacto.<li>Entrada: Índice del contacto seleccionado.<li>Resultado: True, en caso de error al buscar el contacto False.</ul><li><strong>Nombre: R4 - Editar un contacto:</strong><ul><li>Resumen: Modifica la información del contacto a excepción del nombre y el apellido.<li>Entrada: Nombre, Apellido, Dirección, Correo Electrónico, Números de teléfono, Palabras.<li>Resultado: True, en caso de error a la hora de buscar el contacto, o modificar nombre o apellido False.</ul><li><strong>Nombre: R5 - Mostrar todos los contactos:</strong><ul><li>Resumen: Muestra todos los contactos de la lista.<li>Entrada: Ninguna.<li>Resultado: True, en caso de error al buscar los contactos False.</ul><li><strong>Nombre: R6 - Buscar contactos por palabra clave:</strong><ul><li>Resumen: Busca todos los contactos que tengan la palabra clave dada.<li>Entrada: Palabra clave.<li>Resultado: True, en caso de error al buscar los contactos False.</ul></ol><h2>Modelo:</h2><div class=image-placeholder><img alt="Diagrama de clases"loading=lazy src=./diagram-export-19-11-2024-9_31_26-p.-m..svg></div><h2>Código:</h2><h3>listaDeContactos:</h3><div class=code-container><pre><code class=language-python>
 __author__ = "Miguel Francisco Ruales Pianda"
 __license__ = "GPL"
 __version__ = "1.0"
@@ -485,13 +256,7 @@ class ListaDeContactos:
         for palabra in palabras:
             contacto.agregarPalabra(palabra)
         return True
-        </code></pre>
-        <button class="copy-button" aria-label="Copiar código al portapapeles">Copiar</button>
-      </div>
-
-      <h3>Contacto:</h3>
-      <div class="code-container">
-        <pre><code class="language-python">
+        </code></pre><button aria-label="Copiar código al portapapeles"class=copy-button>Copiar</button></div><h3>Contacto:</h3><div class=code-container><pre><code class=language-python>
 __author__ = "Miguel Francisco Ruales Pianda"
 __license__ = "GPL"
 __version__ = "1.0"
@@ -731,13 +496,7 @@ class Contacto:
             raise ValueError("La palabra no puede ser nula o vacía")
         
         return palabra in self.__palabras
-        </code></pre>
-        <button class="copy-button" aria-label="Copiar código al portapapeles">Copiar</button>
-      </div>
-
-      <h3>Main:</h3>
-      <div class="code-container">
-        <pre><code class="language-python">
+        </code></pre><button aria-label="Copiar código al portapapeles"class=copy-button>Copiar</button></div><h3>Main:</h3><div class=code-container><pre><code class=language-python>
 from Mundo.ListaDeContactos import ListaDeContactos
 
 class Menu:
@@ -924,19 +683,7 @@ class Menu:
 
 menu = Menu()
 menu.menu_principal()
-        </code></pre>
-        <button class="copy-button" aria-label="Copiar código al portapapeles">Copiar</button>
-      </div>
-    </div>
-
-    <footer class="footer">
-      <p>Este trabajo final fue hecho por <a target="_blank" href="https://github.com/franbz1">Miguel Francisco Ruales Pianda</a>.</p>
-    </footer>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-core.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/autoloader/prism-autoloader.min.js"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
+        </code></pre><button aria-label="Copiar código al portapapeles"class=copy-button>Copiar</button></div></div><footer class=footer><p>Este trabajo final fue hecho por <a href=https://github.com/franbz1 target=_blank>Miguel Francisco Ruales Pianda</a>.</footer><script src=https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-core.min.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/autoloader/prism-autoloader.min.js></script><script>document.addEventListener('DOMContentLoaded', () => {
           const codeContainers = document.querySelectorAll('.code-container');
 
           codeContainers.forEach(container => {
@@ -960,8 +707,4 @@ menu.menu_principal()
                   });
               });
           });
-      });
-  </script>
-  
-  </body>
-</html>
+      });</script>
